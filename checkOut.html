@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.css"/>
+		<link rel="stylesheet" href="css/styles.css"/>
+        <link rel="stylesheet" href="css/font-style.css"/>
+		
+		<script src="js/jquery/jquery-1.10.1.js"></script>
+        <script src="js/jquery-ui/jquery-ui.js"></script>
+		<script src="js/scripts.js"></script>
+		
+		<title>Document Management System</title>
+	</head>
+
+	<body>
+        <!-- START: Container-->
+            <!-- START: Header-->
+            <header>
+                <div class="logo"></div>
+                <div class="searchBox">
+                    <div class="searchInput">
+                        <input type="search" name="searchText"/>
+                        <div class="searchIcon"><i class="icon-search"></i></div>
+                    </div>
+                    <a id="advSearch">Advance Search</a>
+                </div>
+                <div class="userProfile">
+                    <div class="table">
+                        <div class="cell profilePic">
+                            
+                        </div>
+                        <div class="cell profileDetails">
+                            <div class="username">User Name</div>
+                            <div>
+                                <a>Settings</a> | 
+                                <a>Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <!-- END: Header-->
+        
+            <!-- START: Navigation -->
+            <nav>
+                <ul class="menu">
+                    <li><span class="iconSpace"><i class="icon-cabinet"></i></span>File Cabinet
+                        <ul class="submenu">
+                            <li>Add File Cabinet</li>
+                            <li>Add Folder</li>
+                            <li>Add Document</li>
+                        </ul>
+                    </li>
+                    <li><a href="checkIn.html"><span class="iconSpace"><i class="icon-checkmark"></i></span>Check-in</a></li>
+                    <li><a href="checkOut.html"><span class="iconSpace"><i class="icon-sign-out"></i></span>Checkout</a></li>
+                    <li><span class="iconSpace"><i class="icon-laptop"></i></span>Scan</li>
+                    <li><span class="iconSpace"><i class="icon-cogs"></i></span>Control Panel</li>
+                </ul>
+                <ul class="clipboard" id="clipboard">
+                    <li><span class="iconSpace"><i class="icon-copy"></i></span>Copy</li> 
+                    <li><span class="iconSpace"><i class="icon-scissors"></i></span>Cut</li> 
+                    <li><span class="iconSpace"><i class="icon-paste"></i></span>Paste</li> 
+                    <li><span class="iconSpace"><i class="icon-close"></i></span>Delete</li> 
+                    <li><span class="iconSpace"><i class="icon-edit"></i></span>Rename</li> 
+                    <li><span class="iconSpace"><i class="icon-download"></i></span>Download</li> 
+                    <li><span class="iconSpace"><i class="icon-info-circle"></i></span>Version History</li> 
+                </ul>
+                <div class="clearfix"></div>
+            </nav>
+            <!-- END: Navigation -->
+        
+            <!-- START: Wrapper -->
+            <div class="wrapper">
+                <!-- Start: Search -->
+                <div id="advanceSearchBox" class="column12 gridBox">
+                    <div class="headers">
+                        Search
+                    </div>
+                    <div class="gridBoxContent searchContent">
+                        <div class="table">
+                            <div class="cell">
+                                <label>Field Name</label>
+                                <select>
+                                    <option>Field Name</option>
+                                </select>
+                            </div>
+                            <div class="cell">
+                                <label>Operator</label>
+                                <select>
+                                    <option>Operator Name</option>
+                                </select>
+                            </div>
+                            <div class="cell">
+                                <label>Value</label>
+                                <input type="text" name=""/>
+                            </div>
+                            <div class="cell">
+                                <label>Date</label>
+                                <input type="text" name=""/>
+                            </div>
+                            <div class="cell">
+                                <label> </label>
+                                <button>Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End: Search -->
+                <div class="column2">
+                    <ul class="box">
+                        <li class="ui-state-default padded headers">
+                            <input type="checkbox"/>
+                            Drawers
+                            <div class="searchBox">
+                                <input type="search" placeholder="Search File Cabinet">
+                            </div>
+                        </li>
+                        <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-cabinet"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Anderson</div>
+                                </div>
+                            </div>
+                        </li>
+                         <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-cabinet"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Anderson</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-cabinet"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Anderson</div>
+                                </div>
+                            </div>
+                        </li>
+                         <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-cabinet"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Anderson</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-cabinet"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Anderson</div>
+                                </div>
+                            </div>
+                        </li>
+                         <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-cabinet"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Anderson</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-cabinet"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Anderson</div>
+                                </div>
+                            </div>
+                        </li>
+                         <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-cabinet"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Anderson</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-cabinet"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Anderson</div>
+                                </div>
+                            </div>
+                        </li>
+                         <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-cabinet"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Anderson</div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="column2">
+                    <ul class="box">
+                        <li class="ui-state-default padded headers">
+                            <input type="checkbox"/>
+                            Folders
+                            <div class="searchBox">
+                                <input type="search" placeholder="Search Folder or Document">
+                            </div>
+                        </li>
+                        <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-folder-open"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Personal Documents</div>
+                                </div>
+                            </div>
+                        </li>
+                       
+                        
+                        <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-folder-open"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Personal Documents</div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="ui-state-default padded doc">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-file-word"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Document Name</div>
+                                    <div class="timestamp">Created on 25/1/2014 by admin</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-state-default padded doc">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-file-word"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Document Name</div>
+                                    <div class="timestamp">Created on 25/1/2014 by admin</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-state-default padded doc">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-file-word"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Document Name</div>
+                                    <div class="timestamp">Created on 25/1/2014 by admin</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-state-default padded doc">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-file-word"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Document Name</div>
+                                    <div class="timestamp">Created on 25/1/2014 by admin</div>
+                                </div>
+                            </div>
+                        </li>
+                         <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-folder-open"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Personal Documents</div>
+                                </div>
+                            </div>
+                        </li>
+                         <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-folder-open"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Personal Documents</div>
+                                </div>
+                            </div>
+                        </li>
+                         <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-folder-open"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Personal Documents</div>
+                                </div>
+                            </div>
+                        </li>
+                         <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-folder-open"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Personal Documents</div>
+                                </div>
+                            </div>
+                        </li>
+                         <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-folder-open"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Personal Documents</div>
+                                </div>
+                            </div>
+                        </li>
+                         <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-folder-open"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Personal Documents</div>
+                                </div>
+                            </div>
+                        </li>
+                         <li class="ui-state-default padded">
+                            <div class="table">
+                                <div class="cell"><input type="checkbox" class="clips"/></div>
+                                <div class="cell iconSpace"><i class="icon-folder-open"></i></div>
+                                <div class="cell description">
+                                    <div class="name">Personal Documents</div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="column8 gridBox">
+                    <div class="headers">
+                        Check Out
+                        <div class="headerBtn">
+                            <button class="orangeBtn">Checkout all</button>
+                        </div>
+                    </div>
+                    <div class="gridBoxContent">
+                        <div class="checkInContent">
+                            <div class="table">
+                                <div class="row">
+                                    <div class="theader">Document Name</div>
+                                    <div class="theader">Action</div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell">abcd.doc</div>
+                                    <div class="cell">
+                                        <button class="orangeBtn">Checkout</button>
+                                    </div>
+                                </div>
+                                 <div class="row">
+                                    <div class="cell">abcd.doc</div>
+                                    <div class="cell">
+                                        <button class="orangeBtn">Checkout</button>
+                                    </div>
+                                </div>
+                                 <div class="row">
+                                    <div class="cell">abcd.doc</div>
+                                    <div class="cell">
+                                        <button class="orangeBtn">Checkout</button>
+                                    </div>
+                                </div>
+                                 <div class="row">
+                                    <div class="cell">abcd.doc</div>
+                                    <div class="cell">
+                                        <button class="orangeBtn">Checkout</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- End: Wrapper -->
+        <!-- END: Container-->
+	</body>
+
+</html>

@@ -1,0 +1,378 @@
+@charset "UTF-8";
+/* Bourbon 4.0.2
+ * http://bourbon.io
+ * Copyright 2011–2014 thoughtbot, inc.
+ * MIT License */
+/* Neat 1.6.0
+ * http://neat.bourbon.io
+ * Copyright 2012–2014 thoughtbot, inc.
+ * MIT License */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/**
+ * Changes the display property used by other mixins called in the code block argument.
+ *
+ * @param {String} $display (block) - Display value to be used within the block. Can be `table` or `block`.
+ *
+ * @example scss
+ *   @include display(table) {
+ *    .display-table {
+ *      @include span-columns(6);
+ *     }
+ *   }
+ *
+ * @example css
+ *   // CSS
+ *   .display-table {
+ *      display: table-cell;
+ *      ...
+ *   }
+ */
+/**
+ * Changes the direction property used by other mixins called in the code block argument.
+ *
+ * @param {String} $direction (left-to-right) - Layout direction to be used within the block. Can be `left-to-right` or `right-to-left`.
+ *
+ * @example scss
+ *   @include direction(right-to-left) {
+ *    .right-to-left-block {
+ *      @include span-columns(6);
+ *     }
+ *   }
+ *
+ * @example css
+ *   // CSS
+ *   .right-to-left-block {
+ *     float: right;
+ *      ...
+ *   }
+ */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+  font-size: 13px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+  color: #33A1DE;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.table {
+  display: table;
+}
+.table .row {
+  display: table-row;
+}
+.table .cell {
+  display: table-cell;
+}
+.table .theader {
+  display: table-cell;
+  font-weight: bold;
+}
+
+.iconSpace {
+  width: 15px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Header */
+header .logo {
+  float: left;
+  width: 120px;
+  height: 50px;
+  background: url("../images/logo.jpg") no-repeat center;
+  background-size: 80% 80%;
+  border-right: 1px solid #aaa;
+}
+header .searchBox {
+  float: left;
+  width: 500px;
+  padding: 10px;
+  margin: 1px 5px;
+}
+header .searchBox .searchInput {
+  margin-left: 100px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  position: relative;
+  border-radius: 5px;
+}
+header .searchBox .searchInput input {
+  width: 175px;
+  height: 25px;
+  display: inline-block;
+  border: 0;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+header .searchBox .searchInput .searchIcon {
+  position: absolute;
+  right: -5px;
+  top: -1px;
+  background: #333;
+  width: 25px;
+  color: #fff;
+  padding: 6px;
+  height: 27px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+header .userProfile {
+  float: right;
+  margin: 10px;
+}
+header .userProfile .cell.profilePic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  background: url("../images/user.png") no-repeat center;
+  background-size: 80% 80%;
+}
+header .userProfile .cell.profileDetails {
+  font-size: 11px;
+  padding-left: 5px;
+}
+header .userProfile .cell.profileDetails .username {
+  font-weight: bold;
+}
+
+nav {
+  background: #333;
+}
+nav ul.menu {
+  float: left;
+}
+nav ul.menu li {
+  display: inline-block;
+  color: #fff;
+  padding: 10px;
+  position: relative;
+  border-right: 1px solid #000;
+  cursor: pointer;
+}
+nav ul.menu li a, nav ul.menu li a:link, nav ul.menu li a:visited, nav ul.menu li a:hover {
+  color: #fff;
+}
+nav ul.menu li span.iconSpace {
+  width: 15px;
+  font-size: 16px;
+  display: inline-block;
+}
+nav ul.menu li:hover .submenu {
+  display: block;
+}
+nav ul.clipboard {
+  float: right;
+  margin: 8px;
+  background: #aaa;
+  border-radius: 15px;
+}
+nav ul.clipboard li {
+  display: inline-block;
+  color: #fff;
+  padding: 2px 10px;
+  border-right: 1px solid #000;
+  font-size: 11px;
+}
+nav ul.clipboard li:last-child {
+  border: 0;
+}
+nav ul.clipboard li span.iconSpace {
+  width: 20px;
+  font-size: 16px;
+  display: inline-block;
+}
+nav ul.submenu {
+  position: absolute;
+  z-index: 999;
+  left: 5px;
+  top: 38px;
+  width: 150px;
+  display: none;
+  background: #333;
+}
+nav ul.submenu li {
+  border: 0;
+  display: block;
+  border-bottom: 1px solid #aaa;
+}
+
+div.wrapper {
+  width: 100%;
+}
+div.wrapper .column2 {
+  width: 18%;
+  float: left;
+  margin: 1% 0 0 1%;
+}
+div.wrapper .column8 {
+  width: 60%;
+  float: left;
+  margin: 1% 0 0 1%;
+}
+div.wrapper .column12 {
+  width: 98%;
+  margin: 1% 0 0 1%;
+}
+div.wrapper ul.box {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+div.wrapper ul li.padded {
+  font-weight: 400;
+  padding: 8px 5px;
+  color: #707070;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+}
+div.wrapper ul li.padded:last-child {
+  border: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+div.wrapper ul li.padded .cell {
+  vertical-align: middle;
+}
+div.wrapper ul li.padded .iconSpace {
+  width: 25px;
+}
+div.wrapper ul li.padded .description .name {
+  font-size: 11px;
+  font-weight: bold;
+}
+div.wrapper ul li.padded .description .timestamp {
+  font-size: 9px;
+  margin-top: 2px;
+}
+div.wrapper ul li.doc {
+  background: #fff;
+}
+div.wrapper .gridBox {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+div.wrapper .gridBox .gridBoxContent {
+  min-height: 50px;
+}
+div.wrapper .gridBox .gridBoxContent.searchContent {
+  padding: 10px;
+}
+div.wrapper .gridBox .gridBoxContent.searchContent .cell {
+  width: 25%;
+  vertical-align: middle;
+  text-align: center;
+  padding: 5px;
+}
+div.wrapper .gridBox .gridBoxContent.searchContent .cell label {
+  font-weight: bold;
+  font-size: 11px;
+  display: block;
+  margin-bottom: 5px;
+}
+div.wrapper .gridBox .gridBoxContent.searchContent .cell input, div.wrapper .gridBox .gridBoxContent.searchContent .cell button, div.wrapper .gridBox .gridBoxContent.searchContent .cell select {
+  border: 1px solid #ccc;
+  height: 24px;
+  display: inline-block;
+}
+div.wrapper .gridBox .gridBoxContent.searchContent .cell button {
+  background: #333;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+div.wrapper .gridBox .gridBoxContent .checkInContent {
+  padding: 10px;
+}
+div.wrapper .gridBox .gridBoxContent .checkInContent .table {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+div.wrapper .gridBox .gridBoxContent .checkInContent .table .row:nth-child(odd) {
+  background-image: linear-gradient(to right, #efefef, #f3f3f3);
+}
+div.wrapper .gridBox .gridBoxContent .checkInContent .table .row .cell, div.wrapper .gridBox .gridBoxContent .checkInContent .table .row .theader {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  border-right: 0;
+}
+div.wrapper .gridBox .gridBoxContent .checkInContent .table .row .cell:last-child, div.wrapper .gridBox .gridBoxContent .checkInContent .table .row .theader:last-child {
+  width: 100px;
+  text-align: center;
+}
+div.wrapper .headers {
+  font-weight: bold;
+  background-image: linear-gradient(to right, #efefef, #f3f3f3);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 8px 5px;
+  position: relative;
+}
+div.wrapper .headers .searchBox {
+  position: absolute;
+  right: 5px;
+  top: 6px;
+}
+div.wrapper .headers .searchBox input {
+  width: 80px;
+}
+div.wrapper .headers .headerBtn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+div.wrapper .viewer {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-height: 400px;
+}
+
+#advanceSearchBox, #clipboard {
+  display: none;
+}
+#advanceSearchBox.active, #clipboard.active {
+  display: block;
+}
+
+.orangeBtn {
+  background: orange;
+  border: 0;
+  border-radius: 5px;
+  padding: 2px 10px;
+}
+
+/*# sourceMappingURL=styles.css.map */
