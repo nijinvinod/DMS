@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "bourbon/bourbon";
 @import "neat/neat";
 
@@ -6,8 +7,10 @@ $greyishBlack: #707070;
 $menuColor: #333;
 
 @mixin bgShade{
-    background-image: linear-gradient(to right, #efefef, #f3f3f3);
+    background: #ddd;
 }
+
+.bgWhite{background: #fff}
 
 *, *:before, *:after {
     -moz-box-sizing: border-box;
@@ -20,7 +23,11 @@ $menuColor: #333;
     font-family: arial;
     font-size: 13px;
 }
-
+html,body{
+    background:#f1f1f1;
+}
+button:focus, button{border:0;outline:0;cursor:pointer}
+input{padding:0 5px;}
 .clearfix{clear:both}
 a{text-decoration: none; color:#33A1DE;cursor: pointer}
 ul{list-style-type: none}
@@ -43,6 +50,7 @@ ul{list-style-type: none}
 
 
 header{
+    background: #fff;
     .logo{
         float:left;
         width: 120px;
@@ -70,7 +78,12 @@ header{
                 border:0;
                 border-bottom-left-radius: 5px;
                 border-top-left-radius: 5px;
+                &:focus{
+                    border:0;
+                    outline:0;
+                }
             }
+            
             .searchIcon{
                 position: absolute;
                 right: -5px;
@@ -185,9 +198,15 @@ div.wrapper{
         &.box{
             border-radius: $borderBoxRad;
             border: 1px solid #ccc;
+            .icon-cabinet{
+                color:orange;
+            }
         }
         li{
             &.padded{
+                .active{
+                    color:#33A1DE;
+                }
                 font-weight: 400;
                 padding: 8px 5px;
                 color: $greyishBlack;
@@ -223,7 +242,12 @@ div.wrapper{
         border-radius: $borderBoxRad;
         .gridBoxContent{
             min-height:50px;
-            
+            .innerColumn3Equal{
+                width:31.3%;
+                float:left;
+                margin: 1%;
+               
+            }
             &.searchContent{
                 padding:10px;
                 .cell{
@@ -317,4 +341,47 @@ div.wrapper{
     border: 0;
     border-radius: 5px;
     padding:2px 10px;
+}
+
+.overviewSec{
+    &.table{width:100%;
+        .row{
+            .cell{padding:10px; border-bottom: 1px solid #ccc;
+                &:last-child{width:50px;text-align: right}
+            }
+            &:last-child{
+                .cell{border:0}
+            }
+        }
+    }
+}
+
+.squareBox{
+    background: #fff;
+    width:100%;
+    padding:5px;
+    min-height:50px;
+    margin-top:10px;
+    position: relative;
+    .navicon {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+}
+
+.tabHeading{
+    display: table;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor:pointer;
+    width:100%;
+    .icon{width:60px;background: #539DC2;height: 60px;border-radius: 5px;vertical-align: middle;text-align: center;
+    &.hola{
+        background: #539DC2 url('../images/Hello.png') center no-repeat;
+        background-size:70% 60%;
+    }
+    i{font-size:24px;color:#ddd}
+    }
+    .title{vertical-align: middle;color:#33A1DE;font-size: 18px;padding:5px;}
 }

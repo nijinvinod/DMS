@@ -41,6 +41,12 @@
 .icon-sign-out:before {
 	content: "\f08b";
 }
+.icon-group:before {
+	content: "\f0c0";
+}
+.icon-navicon:before {
+	content: "\f0c9";
+}
 .icon-copy:before {
 	content: "\e60c";
 }
