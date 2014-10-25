@@ -11,6 +11,10 @@ $menuColor: #333;
 }
 
 .bgWhite{background: #fff}
+.bottomBorder{
+    border-bottom-left-radius: $borderBoxRad;
+    border-bottom-right-radius: $borderBoxRad;
+}
 
 *, *:before, *:after {
     -moz-box-sizing: border-box;
@@ -307,6 +311,7 @@ div.wrapper{
         border-top-right-radius: $borderBoxRad;
         padding: 8px 5px;
         position: relative;
+         color:#707070;
         .searchBox{
             position: absolute;
             right: 5px;

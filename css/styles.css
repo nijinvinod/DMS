@@ -58,6 +58,10 @@ html {
 .bgWhite {
   background: #fff; }
 
+.bottomBorder {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; }
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -310,7 +314,8 @@ div.wrapper {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     padding: 8px 5px;
-    position: relative; }
+    position: relative;
+    color: #707070; }
     div.wrapper .headers .searchBox {
       position: absolute;
       right: 5px;
