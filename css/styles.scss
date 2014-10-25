@@ -301,7 +301,7 @@ div.wrapper{
         }
     }
      .headers{
-        font-weight: bold;
+        font-weight: bold !important;
         @include bgShade;
         border-top-left-radius: $borderBoxRad;
         border-top-right-radius: $borderBoxRad;
